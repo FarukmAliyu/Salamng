@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Babandi Textile</title>
+  <meta name="description" content="Babandi Textile - Premium clothing line" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* Navbar Styling */
+    .site-header {
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+    }
+    .logo {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #333;
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    /* Mobile Nav */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #fff;
+        width: 200px;
+        padding: 1rem;
+        border-left: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+      }
+      .nav-links.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#" class="logo">Babandi Textile</a>
+      <button class="menu-toggle" id="menu-toggle">☰</button>
+      <nav class="nav-links" id="nav-links">
+        <a href="#">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="#gallery">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="#contact-info">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1>Elevate your wardrobe with Babandi Textile</h1>
+        <p>Stylish, sustainable, and uniquely African-inspired clothing. Browse our curated collection and wear heritage with pride.</p>
+        <a href="shop.html" class="btn">Shop Now</a>
+      </div>
+      <div class="hero-image">
+        <img src="images/8e71bba0-e903-4bbd-819a-0580ecd5bc1d.jpeg" alt="Clothing showcase" />
+      </div>
+    </div>
+  </section>
+<!-- About Section -->
+<section id="about" class="about-section">
+  <div class="container">
+    <h2>About Babandi Textile</h2>
+    <p>
+      At <strong>Babandi Textile</strong>, we are passionate about preserving African heritage through fashion. 
+      Our mission is to blend tradition with modern style—offering handcrafted, sustainable clothing that 
+      celebrates culture, craftsmanship, and creativity.
+    </p>
+    <a href="about.html" class="btn learn-more-btn">Learn More</a>
+  </div>
+</section>
+<!-- Our Solutions Section -->
+<section id="solutions" class="solutions-section">
+  <div class="container">
+    <h2>Our Solutions</h2>
+    <p class="solutions-intro">
+      We don’t just sell clothes — we solve fashion challenges with modern, culturally inspired solutions.
+    </p>
+    <div class="solutions-grid">
+      
+      <!-- Card 1 -->
+      <div class="solution-card">
+        <h3>🌱 Sustainable Materials</h3>
+        <p>
+          We use eco-friendly fabrics and support local weavers to reduce environmental impact 
+          and promote ethical production. Every piece you buy supports both the planet and 
+          the artisans who make it.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="solution-card">
+        <h3>💸 Affordable Style</h3>
+        <p>
+          Premium designs at accessible prices for everyday wear and special occasions. 
+          We believe everyone deserves to experience African-inspired fashion without breaking the bank.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="solution-card">
+        <h3>🌍 Cultural Heritage</h3>
+        <p>
+          Our designs celebrate African roots, ensuring tradition lives on through 
+          vibrant, modern fashion. Every garment tells a story, preserving identity while inspiring the future.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+  <!-- Tailor Section -->
+  <section class="tailor-section">
+    <div class="container tailor-inner">
+      <div class="tailor-text">
+        <h3>Our Craftsmanship</h3>
+        <p>
+          At Babandi Textile, our skilled tailors combine tradition and modern techniques
+          to create elegant, sustainable clothing. Every stitch reflects attention to detail,
+          quality, and cultural heritage, making each piece a true work of art.
+        </p>
+      </div>
+      <div class="tailor-image">
+        <img src="images/man-sewing-jacket-shop_1048944-6806210.avif" alt="Tailor at work" />
+      </div>
+    </div>
+  </section>
+<!-- Contact Section -->
+<section id="contact-info" class="contact-section">
+  <div class="container">
+    <h2>Get in Touch</h2>
+    <p>We’d love to hear from you. Visit us, call, send an email, or fill out the form below.</p>
+
+    <!-- Contact Info Grid -->
+    <div class="contact-grid">
+      <div class="contact-item">
+        <h3>📍 Address</h3>
+        <p>Tudun Wada, Kaduna, Nigeria</p>
+      </div>
+      <div class="contact-item">
+        <h3>📞 Phone</h3>
+        <p><a href="tel:+2348000000000">+234 800 000 0000</a></p>
+      </div>
+      <div class="contact-item">
+        <h3>✉️ Email</h3>
+        <p><a href="mailto:info@babanditextile.com">info@babanditextile.com</a></p>
+      </div>
+    </div>
+
+    <!-- Map + Form Side by Side -->
+    <div class="map-form-grid">
+      <!-- Google Map -->
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15612.117992965145!2d7.423915900000001!3d10.482676549999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x11aeef18d66ec1d9%3A0x5e918b62d7724a0!2sTudun%20Wada%2C%20Kaduna%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1724079999999!5m2!1sen!2sng" 
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form-container">
+        <h3>Send us a Message</h3>
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your Name" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required placeholder="Your message"></textarea>
+          </div>
+          <button type="submit" class="btn primary-btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container footer-container">
+    <div class="footer-col">
+      <h4>About Us</h4>
+      <p>Babandi Textile blends tradition with modern fashion. Crafted sustainably for the conscious wardrobe.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact-info">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <div class="socials">
+        <a href="#">🌐 Facebook</a>
+        <a href="#">📷 Instagram</a>
+        <a href="#">🐦 Twitter</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; <span id="year"></span> Babandi Textile. All rights reserved.</p>
+  </div>
+</footer>
+  <!-- Scripts -->
+  <script>
+    // Mobile menu toggle
+    document.getElementById("menu-toggle").addEventListener("click", function() {
+      document.getElementById("nav-links").classList.toggle("active");
+    });
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
