@@ -18,12 +18,28 @@
       align-items: center;
       padding: 1rem;
     }
-    .logo {
-      font-size: 1.3rem;
-      font-weight: bold;
-      color: #333;
-      text-decoration: none;
-    }
+  .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: .5px;
+  color: var(--brand);
+}
+
+.logo img {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--brand);
+  background: #fff;
+  padding: 2px;
+}
+.logo span {
+  white-space: nowrap;
+}  
     .nav-links {
       display: flex;
       gap: 1rem;
@@ -70,7 +86,9 @@
   <!-- Header / Navbar -->
   <header class="site-header">
     <div class="container nav">
-      <a href="#" class="logo">SalamNg Clothings</a>
+      <a href="index.html" class="logo">
+  <img src="images/logo.png" alt="SalamNg Clothings Logo">
+  <span>SalamNg Clothings</span> </a> 
       <button class="menu-toggle" id="menu-toggle">☰</button>
       <nav class="nav-links" id="nav-links">
         <a href="#">Home</a>
