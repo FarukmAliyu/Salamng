@@ -1,134 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About Us - SalamNg Clothings</title>
-  <link rel="stylesheet" href="css/styles.css" />
-  <style>
-    /* About page specific */
-    .about-section {
-      padding: 3rem 1rem;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Us - SalamNg Clothings</title>
+<link rel="stylesheet" href="css/styles.css">
+<style>
+.about-section{
+    padding:3rem 1rem;
+}
+.about-intro{
+    font-size:1.2rem;
+    max-width:800px;
+    margin:0 auto 2rem;
+    text-align:center;
+    line-height:1.6;
+}
+.about-image{
+    max-width:800px;
+    margin:0 auto 3rem;
+}
+.about-image img{
+    width:100%;
+    border-radius:15px;
+    box-shadow:0 8px 25px rgba(0,0,0,.12);
+}
+.about-boxes{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:1.5rem;
+}
+.about-box{
+    background:#fff;
+    padding:2rem;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    transition:.3s;
+    text-align:center;
+}
+.about-box:hover{
+    transform:translateY(-8px);
+}
+.about-box h3{
+    color:#5c3aff;
+    margin-bottom:1rem;
+}
+.about-box p{
+    color:#555;
+    line-height:1.7;
+}
+.menu-toggle{
+    display:none;
+}
+@media(max-width:768px){
+    .nav-links{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:80px;
+        right:0;
+        background:#fff;
+        width:220px;
+        padding:1rem;
+        box-shadow:0 4px 10px rgba(0,0,0,.1);
     }
-    .about-intro {
-      font-size: 1.2rem;
-      max-width: 800px;
-      margin: 0 auto 2rem;
-      text-align: center;
-      line-height: 1.6;
+    .nav-links.active{
+        display:flex;
     }
-    .about-content {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      flex-wrap: wrap;
+    .menu-toggle{
+        display:block;
+        background:none;
+        border:none;
+        font-size:1.8rem;
+        cursor:pointer;
     }
-    .about-text {
-      flex: 1 1 300px;
-    }
-    .about-text h3 {
-      margin-top: 1rem;
-    }
-    .about-image {
-      flex: 1 1 300px;
-    }
-    .about-image img {
-      width: 100%;
-      border-radius: 8px;
-    }
-  </style>
+}
+</style>
 </head>
 <body>
-
-  <!-- Section 1: Header -->
-  <section class="header-container">
-    <header class="site-header">
-      <div class="container nav">
-        <a href="index.html" class="logo">SalamNg Clothings</a>
-        <button class="menu-toggle" id="menu-toggle">☰</button>
-        <nav class="nav-links" id="nav-links">
-          <a href="index.html">Home</a>
-          <a href="shop">Shop</a>
-          <a href="index.html#gallery">Gallery</a>
-          <a href="about.html" class="active">About</a>
-          <a href="index.html#contact-info">Contact</a>
-        </nav>
-      </div>
-    </header>
-  </section>
-
-  <!-- Section 2: Main Content -->
-  <section class="main-container">
-    <main class="about-section">
-      <div class="container">
-        <p class="about-intro">
-          We are more than a fashion brand. <strong>SalamNg Clothings</strong> is a cultural movement focused on storytelling, heritage,
-          and craftsmanship. Our garments are ethically produced and locally sourced, ensuring sustainable elegance.
-        </p>
-
-        <div class="about-content">
-          <div class="about-text">
-            <h3>🌍 Community Impact</h3>
-            <p>We work with local artisans, empowering small businesses and promoting African culture across the globe.</p>
-
-            <h3>📦 Responsible Fashion</h3>
-            <p>We’re committed to reducing waste through mindful production, small-batch releases, and long-lasting quality.</p>
-
-            <h3>💬 Our Story</h3>
-            <p>Born in Nigeria, loved globally. Salamng Clothing is inspired by tradition but made for the future.</p>
-          </div>
-          <div class="about-image">
-            <img src="images/WhatsApp Image 2026-06-21 at 17.35.40.jpeg" alt="Salamng Clothings" />
-          </div>
-        </div>
-      </div>
-    </main>
-  </section>
-
-  <!-- Section 3: Footer -->
-  <section class="footer-container">
-    <footer class="site-footer">
-      <div class="container footer-container">
-        <!-- About -->
-        <div class="footer-col">
-          <h4>About Us</h4>
-          <p>SalamNg Clothings blends tradition with modern fashion. Crafted sustainably for the conscious wardrobe.</p>
-        </div>
-
-        <!-- Quick Links -->
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="about.html">About</a></li>
-            <li><a href="index.html#contact-info">Contact</a></li>
-          </ul>
-        </div>
-
-        <!-- Socials -->
-        <div class="footer-col">
-          <h4>Follow Us</h4>
-          <div class="socials">
-            <a href="#">🌐 Facebook</a>
-            <a href="#">📷 Instagram</a>
-            <a href="#">🐦 Twitter</a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; <span id="year"></span> SalamNg Clothings. All rights reserved.</p>
-      </div>
-    </footer>
-  </section>
-
-  <!-- Script -->
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-    // Mobile nav toggle
-    document.getElementById("menu-toggle").addEventListener("click", function() {
-      document.getElementById("nav-links").classList.toggle("active");
-    });
-  </script>
+<!-- Header -->
+<header class="site-header">
+<div class="container nav">
+<a href="index.html" class="logo">
+    SalamNg Clothings
+</a>
+<button class="menu-toggle" id="menu-toggle">☰</button>
+<nav class="nav-links" id="nav-links">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html" class="active">About</a>
+    <a href="index.html#contact-info">Contact</a>
+</nav>
+</div>
+</header>
+<!-- About Section -->
+<section class="about-section">
+<div class="container">
+<p class="about-intro">
+We are more than a fashion brand.
+<strong>SalamNg Clothings</strong> is a cultural movement focused on storytelling,
+heritage, and craftsmanship. Our garments are ethically produced and locally
+sourced, ensuring sustainable elegance.
+</p>
+<div class="about-image">
+<img src="images/WhatsApp Image 2026-06-21 at 17.35.40.jpeg" alt="SalamNg Clothings">
+</div>
+<div class="about-boxes">
+<div class="about-box">
+<h3>🌍 Community Impact</h3>
+<p>
+We work with local artisans, empowering small businesses and promoting
+African culture across the globe.
+</p>
+</div>
+<div class="about-box">
+<h3>📦 Responsible Fashion</h3>
+<p>
+We’re committed to reducing waste through mindful production,
+small-batch releases, and long-lasting quality.
+</p>
+</div>
+<div class="about-box">
+<h3>💬 Our Story</h3>
+<p>
+Born in Nigeria, loved globally. SalamNg Clothings is inspired by
+tradition but made for the future.
+</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="site-footer">
+<div class="container footer-container">
+<div class="footer-col">
+<h4>About Us</h4>
+<p>
+SalamNg Clothings blends tradition with modern fashion.
+Crafted sustainably for the conscious wardrobe.
+</p>
+</div>
+<div class="footer-col">
+<h4>Quick Links</h4>
+<ul>
+<li><a href="about.html">About</a></li>
+<li><a href="index.html#contact-info">Contact</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Follow Us</h4>
+<div class="socials">
+<a href="#">🌐 Facebook</a>
+<a href="#">📷 Instagram</a>
+<a href="#">🐦 Twitter</a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; <span id="year"></span> SalamNg Clothings. All rights reserved.</p>
+</div>
+</footer>
+<script>
+document.getElementById("year").textContent =
+new Date().getFullYear();
+document.getElementById("menu-toggle").addEventListener("click", function(){
+document.getElementById("nav-links").classList.toggle("active");
+});
+</script>
 </body>
 </html>
-
-
